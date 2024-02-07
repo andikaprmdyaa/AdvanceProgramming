@@ -31,6 +31,17 @@ public class ProductServiceImpl implements ProductService{
         return allProduct;
     }
 
+    public Product get(String id) {
+        for (Iterator<Product> it = productRepository.findAll(); it.hasNext(); ) {
+            Product currentIteration = it.next();
+            if (currentIteration.getProductId().equals(id)) {
+                return currentIteration;
+            }
+        }
+        return null;
+    }
+
+
     @Override
     public Boolean delete(int id) {
         Product product = null;
@@ -57,6 +68,12 @@ public class ProductServiceImpl implements ProductService{
         }
         return true;
 
+    }
+
+    @Override
+    public Product edit(Product product) {
+        productRepository.edit(product);
+        return product;
     }
 
 }
