@@ -20,4 +20,9 @@ public class ProductRepository {
         return productData.iterator();
 
     }
+
+
+    public boolean delete(Product product) {
+        return productData.remove(product);
+    }
 }
