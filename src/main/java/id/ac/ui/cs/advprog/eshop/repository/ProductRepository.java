@@ -28,6 +28,10 @@ public class ProductRepository {
     }
 
     public Product edit(Product editedProduct) {
+        if (editedProduct.getProductQuantity() == 0) {
+            // Return an error or throw an exception indicating that zero quantities are not allowed
+            throw new IllegalArgumentException("Zero quantities are not allowed.");
+        }
         Optional<Product> existingProduct = productData.stream()
                 .filter(p -> p.getProductId().equals(editedProduct.getProductId()))
                 .findFirst();
