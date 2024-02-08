@@ -65,45 +65,35 @@ public class ProductRepositoryTest {
 
     @Test
     void testEditProduct() {
-        // Added logs to make sure that this code is doing exactly what I'm thinking of it doing
-        System.out.println("Starting testEditProduct...");
 
         Product originalProduct = new Product();
         originalProduct.setProductId("18b7e61f-8bfa-4723-b535-7a1c88c9201d");
         originalProduct.setProductName("Ipad Pro X");
         originalProduct.setProductQuantity(10);
         productRepository.create(originalProduct);
-        System.out.println("Original product created: " + originalProduct.getProductName() + ", quantity: " + originalProduct.getProductQuantity());
 
         String updatedName = "Iphone 15 Pro";
         int updatedQuantity = 5;
-        System.out.println("Updating product with name: " + updatedName + ", quantity: " + updatedQuantity);
 
         Product updatedProduct = new Product();
         updatedProduct.setProductId(originalProduct.getProductId());
         updatedProduct.setProductName(updatedName);
         updatedProduct.setProductQuantity(updatedQuantity);
         productRepository.edit(updatedProduct);
-        System.out.println("Product updated: " + updatedProduct.getProductName() + ", quantity: " + updatedQuantity);
 
-        System.out.println("End of testEditProduct.");
     }
 
     @Test
     void testEditProductToZeroQuantity() {
-        // Added logs to make sure that this code is doing exactly what I'm thinking of it doing
-        System.out.println("Starting testEditProductToZeroQuantity...");
 
         Product originalProduct = new Product();
         originalProduct.setProductId("e61f8bfa-7a1c-4723-b535-18b788c9201d");
         originalProduct.setProductName("Ipad Air 4");
         originalProduct.setProductQuantity(10);
         productRepository.create(originalProduct);
-        System.out.println("Original product created: " + originalProduct.getProductName() + ", quantity: " + originalProduct.getProductQuantity());
 
         String updatedName = "Iphone 14 Max";
         int updatedQuantity = 0;
-        System.out.println("Updating product with name: " + updatedName + ", quantity: " + updatedQuantity);
 
         Product updatedProduct = new Product();
         updatedProduct.setProductId(originalProduct.getProductId());
@@ -120,41 +110,30 @@ public class ProductRepositoryTest {
 
     @Test
     void testDeleteProduct() {
-        // Added logs to make sure that this code is doing exactly what I'm thinking of it doing
-        System.out.println("Starting testDeleteProduct...");
 
         Product productToDelete = new Product();
         productToDelete.setProductId("fb2871a9-40c6-4e4d-a4c2-102f9d8b3d39");
         productToDelete.setProductName("Mummy Corpse");
         productToDelete.setProductQuantity(100);
         productRepository.create(productToDelete);
-        System.out.println("Product to delete: " + productToDelete.getProductName());
 
-        System.out.println("Deleting product: " + productToDelete.getProductName());
         boolean deletionResult = productRepository.delete(productToDelete);
-        System.out.println("Deletion result: " + deletionResult);
 
         assertTrue(deletionResult);
-        System.out.println("End of testDeleteProduct.");
     }
 
     @Test
-    void testDeleteNonExistentProduct() {
-        // Added logs to make sure that this code is doing exactly what I'm thinking of it doing
-        System.out.println("Starting testDeleteNonExistentProduct...");
+    void testDeleteProductWithNoID() {
+        // Create a product with no ID (non-existent product)
+        Product productWithNoID = new Product();
+        productWithNoID.setProductId("product-id-missing");
+        productWithNoID.setProductName("Product with No ID");
+        productWithNoID.setProductQuantity(0);
 
-        Product nonExistentProduct = new Product();
-        nonExistentProduct.setProductId("non-existent-id");
-        nonExistentProduct.setProductName("Non-Existent Product");
-        nonExistentProduct.setProductQuantity(0);
-        System.out.println("Product to delete (non-existent): " + nonExistentProduct.getProductName());
-
-        System.out.println("Deleting product (non-existent): " + nonExistentProduct.getProductId());
-        boolean deletionResult = productRepository.delete(nonExistentProduct);
-        System.out.println("Deletion result (non-existent): " + deletionResult);
+        boolean deletionResult = productRepository.delete(productWithNoID);
 
         assertFalse(deletionResult);
-        System.out.println("End of testDeleteNonExistentProduct.");
     }
+
 
 }

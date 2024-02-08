@@ -50,8 +50,6 @@ class CreateProductFunctionalTest {
         submitButton.click();
 
         List<WebElement> cells = driver.findElements(By.tagName("td"));
-        System.out.println("Product Name: " + cells.get(0).getText());
-        System.out.println("Product Quantity: " + cells.get(1).getText());
         assertEquals(name, cells.get(0).getText());
         assertEquals(quantity, cells.get(1).getText());
     }
