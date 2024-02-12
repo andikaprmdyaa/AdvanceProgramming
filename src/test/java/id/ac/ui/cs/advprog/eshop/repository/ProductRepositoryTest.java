@@ -120,7 +120,7 @@ public class ProductRepositoryTest {
         boolean deletionResult = productRepository.delete(productToDelete);
 
         assertTrue(deletionResult);
-    }
+     }
 
     @Test
     void testDeleteProductWithNoID() {
