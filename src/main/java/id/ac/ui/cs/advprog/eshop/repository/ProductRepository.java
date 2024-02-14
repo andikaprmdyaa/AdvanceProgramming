@@ -43,5 +43,13 @@ public class ProductRepository {
         // If the product is not found, return null
         return null;
     }
+    public Product findProductById(String productId) {
+        for (Product currentProduct : productData) {
+            if (currentProduct.getProductId().equals(productId)) {
+                return currentProduct;
+            }
+        }
+        return null; // If no product with the specified ID is found
+    }
 
 }

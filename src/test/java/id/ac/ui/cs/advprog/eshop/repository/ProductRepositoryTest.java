@@ -13,7 +13,7 @@ import java.util.Iterator;
 import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(MockitoExtension.class)
-public class ProductRepositoryTest {
+class ProductRepositoryTest {
 
     @InjectMocks
     ProductRepository productRepository;
@@ -80,6 +80,12 @@ public class ProductRepositoryTest {
         updatedProduct.setProductName(updatedName);
         updatedProduct.setProductQuantity(updatedQuantity);
         productRepository.edit(updatedProduct);
+
+
+        // Assert
+        assertEquals(updatedName, productRepository.findProductById(originalProduct.getProductId()).getProductName());
+        assertEquals(updatedQuantity, productRepository.findProductById(originalProduct.getProductId()).getProductQuantity());
+
 
     }
 
@@ -164,6 +170,28 @@ public class ProductRepositoryTest {
         assertEquals(originalProduct.getProductName(), savedProduct.getProductName());
         assertEquals(originalProduct.getProductQuantity(), savedProduct.getProductQuantity());
         assertFalse(productIterator.hasNext()); // Only one product should be present in the repository
-    }
 
+        Product retrievedProduct = productRepository.findProductById("aBunchOfBull");
+        assertEquals("Ipad Air 5", retrievedProduct.getProductName());
+        assertEquals(10, retrievedProduct.getProductQuantity());
+    }
+    @Test
+    void FindProductByIDTest() {
+        // Arrange
+        Product product = new Product();
+        product.setProductId("8a1c18b7-e61f-4723-b535-8bfa88c9201d");
+        product.setProductName("ipad air 4");
+        product.setProductQuantity(20);
+        productRepository.create(product);
+
+        // Act
+        Product foundProduct = productRepository.findProductById(product.getProductId());
+
+        // Assert
+        assertEquals(product, foundProduct);
+
+        // Act & Assert
+        Product nonExistingProduct = productRepository.findProductById("non-existing-id");
+        assertNull(nonExistingProduct);
+    }
 }
