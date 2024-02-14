@@ -78,3 +78,11 @@ tasks.test {
 tasks.jacocoTestReport {
     dependsOn(tasks.test)
 }
+
+sonar {
+    properties {
+        property("sonar.projectKey", "andikaprmdyaa_AdvanceProgramming")
+        property("sonar.organization", "andikaprmdyaa30")
+        property("sonar.host.url", "https://sonarcloud.io")
+    }
+}
