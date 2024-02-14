@@ -120,7 +120,7 @@ public class ProductRepositoryTest {
         boolean deletionResult = productRepository.delete(productToDelete);
 
         assertTrue(deletionResult);
-     }
+    }
 
     @Test
     void testDeleteProductWithNoID() {
@@ -135,5 +135,35 @@ public class ProductRepositoryTest {
         assertFalse(deletionResult);
     }
 
+    @Test
+    void testEditProductWithNonMatchingId() {
+        // Creating an original product
+        Product originalProduct = new Product();
+        originalProduct.setProductId("aBunchOfBull");
+        originalProduct.setProductName("Ryuuen");
+        originalProduct.setProductQuantity(10);
+        productRepository.create(originalProduct);
+
+        // Attempting to update with a product having a different ID
+        String updatedName = "Koenji";
+        int updatedQuantity = 5;
+
+        Product updatedProduct = new Product();
+        updatedProduct.setProductId("differentId"); // Different ID
+        updatedProduct.setProductName(updatedName);
+        updatedProduct.setProductQuantity(updatedQuantity);
+
+        // Attempt to edit the product
+        productRepository.edit(updatedProduct);
+
+        // Verify that the repository state remains unchanged
+        Iterator<Product> productIterator = productRepository.findAll();
+        assertTrue(productIterator.hasNext()); // Repository should not be empty
+        Product savedProduct = productIterator.next();
+        assertEquals(originalProduct.getProductId(), savedProduct.getProductId());
+        assertEquals(originalProduct.getProductName(), savedProduct.getProductName());
+        assertEquals(originalProduct.getProductQuantity(), savedProduct.getProductQuantity());
+        assertFalse(productIterator.hasNext()); // Only one product should be present in the repository
+    }
 
 }
