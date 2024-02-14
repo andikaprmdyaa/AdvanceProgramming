@@ -139,13 +139,13 @@ public class ProductRepositoryTest {
     void testEditProductWithNonMatchingId() {
         // Creating an original product
         Product originalProduct = new Product();
-        originalProduct.setProductId("aBunchOfBull");
-        originalProduct.setProductName("Ryuuen");
+        originalProduct.setProductId("a712-nsj33-2112");
+        originalProduct.setProductName("Ipad Air 5");
         originalProduct.setProductQuantity(10);
         productRepository.create(originalProduct);
 
         // Attempting to update with a product having a different ID
-        String updatedName = "Koenji";
+        String updatedName = "Iphone 15";
         int updatedQuantity = 5;
 
         Product updatedProduct = new Product();
