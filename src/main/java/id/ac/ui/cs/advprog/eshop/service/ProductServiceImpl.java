@@ -13,7 +13,7 @@ import java.util.List;
 public class ProductServiceImpl implements ProductService{
 
     @Autowired
-    private ProductRepository productRepository;
+    ProductRepository productRepository;
     private int id = 0;
 
     @Override
