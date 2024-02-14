@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="id.ac.ui.cs.advprog.eshop.functional.CreateProductFunctionalTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-02-13T14:09:55" hostname="DESKTOP-TNPAI0N" time="8.939">
+  <properties/>
+  <testcase name="testProductCreation(ChromeDriver)" classname="id.ac.ui.cs.advprog.eshop.functional.CreateProductFunctionalTest" time="8.939"/>
+  <system-out><![CDATA[21:09:49.546 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [id.ac.ui.cs.advprog.eshop.functional.CreateProductFunctionalTest]: CreateProductFunctionalTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:09:49.881 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration id.ac.ui.cs.advprog.eshop.EshopApplication for test class id.ac.ui.cs.advprog.eshop.functional.CreateProductFunctionalTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.2)
+
+2024-02-13T21:09:51.048+07:00  INFO 11912 --- [    Test worker] .a.u.c.a.e.f.CreateProductFunctionalTest : Starting CreateProductFunctionalTest using Java 21.0.2 with PID 11912 (started by Asus in C:\Users\Asus\IdeaProjects\eshop)
+2024-02-13T21:09:51.054+07:00  INFO 11912 --- [    Test worker] .a.u.c.a.e.f.CreateProductFunctionalTest : No active profile set, falling back to 1 default profile: "default"
+2024-02-13T21:09:53.408+07:00  INFO 11912 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2024-02-13T21:09:53.437+07:00  INFO 11912 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-13T21:09:53.438+07:00  INFO 11912 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-13T21:09:53.629+07:00  INFO 11912 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-13T21:09:53.632+07:00  INFO 11912 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2512 ms
+2024-02-13T21:09:55.166+07:00  INFO 11912 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 62758 (http) with context path ''
+2024-02-13T21:09:55.183+07:00  INFO 11912 --- [    Test worker] .a.u.c.a.e.f.CreateProductFunctionalTest : Started CreateProductFunctionalTest in 4.86 seconds (process running for 9.042)
+2024-02-13T21:09:57.616+07:00  INFO 11912 --- [    Test worker] i.g.bonigarcia.wdm.WebDriverManager      : Using chromedriver 121.0.6167.85 (resolved driver for Chrome 121)
+2024-02-13T21:09:57.660+07:00  INFO 11912 --- [    Test worker] i.g.bonigarcia.wdm.WebDriverManager      : Exporting webdriver.chrome.driver as C:\Users\Asus\.cache\selenium\chromedriver\win64\121.0.6167.85\chromedriver.exe
+2024-02-13T21:09:59.850+07:00  WARN 11912 --- [    Test worker] o.o.selenium.devtools.CdpVersionFinder   : Unable to find an exact match for CDP version 121, returning the closest version; found: 118; Please update to a Selenium version that supports CDP version 121
+2024-02-13T21:10:00.129+07:00  INFO 11912 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-13T21:10:00.130+07:00  INFO 11912 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-13T21:10:00.133+07:00  INFO 11912 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\Asus\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.14.11\f9cb566608fbac6bc7bf54901a7aa11543a989ee\byte-buddy-agent-1.14.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>
