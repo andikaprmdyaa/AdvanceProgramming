@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2024-02-22T04:21:57" hostname="DESKTOP-TNPAI0N" time="0.108">
+<testsuite name="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2024-02-22T07:14:32" hostname="DESKTOP-TNPAI0N" time="0.067">
   <properties/>
-  <testcase name="FindProductByIDTest()" classname="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" time="0.045"/>
-  <testcase name="testEditProductWithNonMatchingId()" classname="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" time="0.007"/>
-  <testcase name="testCreateAndFind()" classname="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" time="0.006"/>
-  <testcase name="testDeleteProductWithNoID()" classname="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" time="0.008"/>
-  <testcase name="testFindAllIfEmpty()" classname="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" time="0.005"/>
+  <testcase name="FindProductByIDTest()" classname="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" time="0.024"/>
+  <testcase name="testEditProductWithNonMatchingId()" classname="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" time="0.004"/>
+  <testcase name="testCreateAndFind()" classname="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" time="0.004"/>
+  <testcase name="testDeleteProductWithNoID()" classname="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" time="0.004"/>
+  <testcase name="testFindAllIfEmpty()" classname="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" time="0.004"/>
   <testcase name="testEditProduct()" classname="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" time="0.005"/>
-  <testcase name="testFindAllIfMoreThanOneProduct()" classname="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" time="0.007"/>
+  <testcase name="testFindAllIfMoreThanOneProduct()" classname="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" time="0.003"/>
   <testcase name="testDeleteProduct()" classname="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" time="0.004"/>
-  <testcase name="testEditProductToZeroQuantity()" classname="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" time="0.004"/>
+  <testcase name="testEditProductToZeroQuantity()" classname="id.ac.ui.cs.advprog.eshop.repository.ProductRepositoryTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
