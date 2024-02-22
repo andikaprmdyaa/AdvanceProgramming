@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="id.ac.ui.cs.advprog.eshop.model.ProductTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-02-22T04:21:57" hostname="DESKTOP-TNPAI0N" time="0.01">
+<testsuite name="id.ac.ui.cs.advprog.eshop.model.ProductTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-02-22T07:14:32" hostname="DESKTOP-TNPAI0N" time="0.014">
   <properties/>
   <testcase name="testGetProductId()" classname="id.ac.ui.cs.advprog.eshop.model.ProductTest" time="0.002"/>
   <testcase name="testGetProductName()" classname="id.ac.ui.cs.advprog.eshop.model.ProductTest" time="0.002"/>
-  <testcase name="testGetProductQuantity()" classname="id.ac.ui.cs.advprog.eshop.model.ProductTest" time="0.002"/>
+  <testcase name="testGetProductQuantity()" classname="id.ac.ui.cs.advprog.eshop.model.ProductTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
