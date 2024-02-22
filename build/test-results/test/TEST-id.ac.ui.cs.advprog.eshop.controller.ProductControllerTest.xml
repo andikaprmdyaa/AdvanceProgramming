@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="id.ac.ui.cs.advprog.eshop.controller.ProductControllerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2024-02-22T04:17:11" hostname="DESKTOP-TNPAI0N" time="0.874">
+  <properties/>
+  <testcase name="testEditProductPage()" classname="id.ac.ui.cs.advprog.eshop.controller.ProductControllerTest" time="0.783"/>
+  <testcase name="testEditProductPost()" classname="id.ac.ui.cs.advprog.eshop.controller.ProductControllerTest" time="0.012"/>
+  <testcase name="testCreateProductPage()" classname="id.ac.ui.cs.advprog.eshop.controller.ProductControllerTest" time="0.018"/>
+  <testcase name="testCreateProductPost()" classname="id.ac.ui.cs.advprog.eshop.controller.ProductControllerTest" time="0.009"/>
+  <testcase name="testProductListPage()" classname="id.ac.ui.cs.advprog.eshop.controller.ProductControllerTest" time="0.013"/>
+  <testcase name="testDeleteProduct()" classname="id.ac.ui.cs.advprog.eshop.controller.ProductControllerTest" time="0.021"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

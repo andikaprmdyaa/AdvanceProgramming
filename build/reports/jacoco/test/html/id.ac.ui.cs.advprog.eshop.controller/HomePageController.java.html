@@ -3,13 +3,12 @@
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.springframework.web.bind.annotation.*;
 @Controller
-@RequestMapping(&quot;&quot;)
-<span class="fc" id="L9">public class HomePageController {</span>
-    @GetMapping(&quot;&quot;)
+<span class="fc" id="L8">public class HomePageController {</span>
+    @GetMapping(&quot;/&quot;)
     public String home() {
-<span class="nc" id="L12">        return &quot;HomePage&quot;;</span>
+<span class="fc" id="L11">        return &quot;HomePage&quot;;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>
