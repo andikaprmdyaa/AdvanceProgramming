@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="id.ac.ui.cs.advprog.eshop.controller.HomePageControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-02-22T04:17:10" hostname="DESKTOP-TNPAI0N" time="1.078">
+<testsuite name="id.ac.ui.cs.advprog.eshop.controller.HomePageControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-02-22T04:21:55" hostname="DESKTOP-TNPAI0N" time="0.876">
   <properties/>
-  <testcase name="testHomePage()" classname="id.ac.ui.cs.advprog.eshop.controller.HomePageControllerTest" time="1.078"/>
-  <system-out><![CDATA[2024-02-22T11:17:10.249+07:00  INFO 6332 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [id.ac.ui.cs.advprog.eshop.controller.HomePageControllerTest]: HomePageControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-02-22T11:17:10.308+07:00  INFO 6332 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration id.ac.ui.cs.advprog.eshop.EshopApplication for test class id.ac.ui.cs.advprog.eshop.controller.HomePageControllerTest
+  <testcase name="testHomePage()" classname="id.ac.ui.cs.advprog.eshop.controller.HomePageControllerTest" time="0.876"/>
+  <system-out><![CDATA[2024-02-22T11:21:55.010+07:00  INFO 22520 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [id.ac.ui.cs.advprog.eshop.controller.HomePageControllerTest]: HomePageControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-02-22T11:21:55.057+07:00  INFO 22520 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration id.ac.ui.cs.advprog.eshop.EshopApplication for test class id.ac.ui.cs.advprog.eshop.controller.HomePageControllerTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -13,12 +13,12 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.2)
 
-2024-02-22T11:17:10.373+07:00  INFO 6332 --- [    Test worker] i.a.u.c.a.e.c.HomePageControllerTest     : Starting HomePageControllerTest using Java 21.0.2 with PID 6332 (started by Asus in C:\Users\Asus\IdeaProjects\eshop)
-2024-02-22T11:17:10.373+07:00  INFO 6332 --- [    Test worker] i.a.u.c.a.e.c.HomePageControllerTest     : No active profile set, falling back to 1 default profile: "default"
-2024-02-22T11:17:10.734+07:00  INFO 6332 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-02-22T11:17:10.735+07:00  INFO 6332 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-02-22T11:17:10.737+07:00  INFO 6332 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2024-02-22T11:17:10.752+07:00  INFO 6332 --- [    Test worker] i.a.u.c.a.e.c.HomePageControllerTest     : Started HomePageControllerTest in 0.436 seconds (process running for 13.628)
+2024-02-22T11:21:55.109+07:00  INFO 22520 --- [    Test worker] i.a.u.c.a.e.c.HomePageControllerTest     : Starting HomePageControllerTest using Java 21.0.2 with PID 22520 (started by Asus in C:\Users\Asus\IdeaProjects\eshop)
+2024-02-22T11:21:55.109+07:00  INFO 22520 --- [    Test worker] i.a.u.c.a.e.c.HomePageControllerTest     : No active profile set, falling back to 1 default profile: "default"
+2024-02-22T11:21:55.427+07:00  INFO 22520 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-02-22T11:21:55.428+07:00  INFO 22520 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-02-22T11:21:55.430+07:00  INFO 22520 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-02-22T11:21:55.440+07:00  INFO 22520 --- [    Test worker] i.a.u.c.a.e.c.HomePageControllerTest     : Started HomePageControllerTest in 0.376 seconds (process running for 12.706)
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
