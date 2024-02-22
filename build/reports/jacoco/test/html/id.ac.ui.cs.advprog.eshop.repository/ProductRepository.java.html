@@ -6,39 +6,50 @@ import org.springframework.stereotype.Repository;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Optional;
 
 @Repository
-<span class="fc" id="L12">public class ProductRepository {</span>
-<span class="fc" id="L13">    private List&lt;Product&gt; productData = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L11">public class ProductRepository {</span>
+<span class="fc" id="L12">    private List&lt;Product&gt; productData = new ArrayList&lt;&gt;();</span>
 
     public Product create(Product product){
-<span class="nc" id="L16">        productData.add(product);</span>
-<span class="nc" id="L17">        return product;</span>
+<span class="fc" id="L15">        productData.add(product);</span>
+<span class="fc" id="L16">        return product;</span>
     }
 
     public Iterator&lt;Product&gt; findAll() {
-<span class="nc" id="L21">        return productData.iterator();</span>
+<span class="fc" id="L20">        return productData.iterator();</span>
 
     }
 
 
     public boolean delete(Product product) {
-<span class="nc" id="L27">        return productData.remove(product);</span>
+<span class="fc" id="L26">        return productData.remove(product);</span>
     }
 
     public Product edit(Product editedProduct) {
-<span class="nc bnc" id="L31" title="All 2 branches missed.">        if (editedProduct.getProductQuantity() == 0) {</span>
+<span class="fc bfc" id="L30" title="All 2 branches covered.">        if (editedProduct.getProductQuantity() == 0) {</span>
             // Return an error or throw an exception indicating that zero quantities are not allowed
-<span class="nc" id="L33">            throw new IllegalArgumentException(&quot;Zero quantities are not allowed.&quot;);</span>
+<span class="fc" id="L32">            throw new IllegalArgumentException(&quot;Zero quantities are not allowed.&quot;);</span>
         }
-<span class="nc" id="L35">        Optional&lt;Product&gt; existingProduct = productData.stream()</span>
-<span class="nc" id="L36">                .filter(p -&gt; p.getProductId().equals(editedProduct.getProductId()))</span>
-<span class="nc" id="L37">                .findFirst();</span>
-
-<span class="nc" id="L39">        existingProduct.ifPresent(product -&gt; productData.set(productData.indexOf(product), editedProduct));</span>
-
-<span class="nc" id="L41">        return existingProduct.orElse(null);</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">        for (Product curProduct : productData) {</span>
+<span class="fc bfc" id="L35" title="All 2 branches covered.">            if (curProduct.getProductId().equals(editedProduct.getProductId())) {</span>
+<span class="fc" id="L36">                int index = productData.indexOf(curProduct);</span>
+<span class="pc bpc" id="L37" title="1 of 2 branches missed.">                if (index != -1) {</span>
+<span class="fc" id="L38">                    productData.set(index, editedProduct);</span>
+<span class="fc" id="L39">                    return editedProduct;</span>
+                }
+            }
+<span class="fc" id="L42">        }</span>
+        // If the product is not found, return null
+<span class="fc" id="L44">        return null;</span>
+    }
+    public Product findProductById(String productId) {
+<span class="fc bfc" id="L47" title="All 2 branches covered.">            for (Product currentProduct : productData) {</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">            if (currentProduct.getProductId().equals(productId)) {</span>
+<span class="fc" id="L49">                return currentProduct;</span>
+            }
+<span class="fc" id="L51">        }</span>
+<span class="fc" id="L52">        return null; // If no product with the specified ID is found</span>
     }
 
 }

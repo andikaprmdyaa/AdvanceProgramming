@@ -171,7 +171,7 @@ class ProductRepositoryTest {
         assertEquals(originalProduct.getProductQuantity(), savedProduct.getProductQuantity());
         assertFalse(productIterator.hasNext()); // Only one product should be present in the repository
 
-        Product retrievedProduct = productRepository.findProductById("aBunchOfBull");
+        Product retrievedProduct = productRepository.findProductById("a712-nsj33-2112");
         assertEquals("Ipad Air 5", retrievedProduct.getProductName());
         assertEquals(10, retrievedProduct.getProductQuantity());
     }
