@@ -43,6 +43,14 @@ public class ProductRepository {
         // If the product is not found, return null
         return null;
     }
+
+    public boolean delete(String idProduct) {
+        Product product = findProductById(idProduct);
+        if (product != null) {
+            return productData.remove(product);
+        }
+        return false;
+    }
     public Product findProductById(String productId) {
             for (Product currentProduct : productData) {
             if (currentProduct.getProductId().equals(productId)) {
